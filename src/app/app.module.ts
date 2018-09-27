@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ResultComponent } from './components/result/result.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { Header } from './components/search-bar/search-bar.component';
+import { Search } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { Header } from './components/search-bar/search-bar.component';
     HomeComponent,
     ResultComponent,
     NotFoundComponent,
-    Header
+    Search
   ],
   imports: [
     BrowserModule,

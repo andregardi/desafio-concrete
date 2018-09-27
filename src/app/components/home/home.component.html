@@ -1,10 +1,16 @@
 <div class="center">
   <div class="relative">
     <div class="Github-Search">
-      <b>Github</b> Search</div>
-    <input type="text" class=" Search-Input shadow"><button>
-      <img src="./assets/img/search-icon.svg" class="Search-Icon">
-    </button>
+      <b>Github</b>
+      <span class="text-style-1"> Search</span>
+    </div>
+    <form (submit)="searchCliked()">
+      <div class="search-bar shadow">
+        <input type="text" class=" Search-Input">
+        <button type="submit" class="search-button">
+          <img src="./assets/img/search-icon.svg" class="Search-Icon">
+        </button>
+      </div>
+    </form>
   </div>
 </div>
-

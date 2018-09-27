@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Header} from '../search-bar/search-bar.component'
+import { Search} from '../search/search.component'
 
 @Component({
   selector: 'app-result',
