@@ -59,3 +59,27 @@ button {
   background-color: var(--white);
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
 }
+
+.Not-found-message {
+  width: 315px;
+  height: 41px;
+  font-family: Raleway;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ac53f2;
+  width: 100%;
+  text-align: center;
+  margin-top: 118px;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}

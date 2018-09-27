@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { GithubService } from '../../services/github.service'
 
 @Component({
   selector: 'app-home',
@@ -7,13 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  userName: string;
+
+  constructor( private router: Router) { }
 
   ngOnInit() {
   }
 
-  searchCliked(){
-    alert("a");
+  searchSubimited(e){
+    e.preventDefault();
+    let route = "/search/"+this.userName;
+    this.router.navigate([route]);
   }
 
 }

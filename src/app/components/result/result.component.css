@@ -75,8 +75,6 @@
 }
 
 .repo-name {
-  width: 375.5px;
-  height: 40.8px;
   font-family: Raleway;
   font-size: 35px;
   font-weight: normal;
@@ -90,7 +88,6 @@
 
 .repo-description {
   width: 600px;
-  height: 25.5px;
   font-family: Raleway;
   font-size: 20px;
   font-weight: 300;
@@ -104,8 +101,8 @@
 
 .star-icon {
   margin-top: 9px;
-  width: 25.5px;
-  height: 24.5px;
+  width: 25px;
+  height: 24px;
   vertical-align: middle;
   margin-right: 7px;
   vertical-align: middle;

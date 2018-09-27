@@ -1,11 +1,26 @@
 <div class="header">
   <div class="Github-Search">
-    <b>Github</b> <span class="text-style-1"> Search</span></div>
+    <b>Github</b>
+    <span class="text-style-1"> Search</span>
+  </div>
   <div class="search-bar shadow">
-    <input type="text" class=" Search-Input ">
-    <button>
-      <img src="./assets/img/search-icon.svg" class="Search-Icon">
-    </button>
+    <form (submit)="searchSubimited($event)">
+      <input type="text" class=" Search-Input" name="userName" [(ngModel)]="userName">
+      <button type="submit" class="search-button">
+        <img src="./assets/img/search-icon.svg" class="Search-Icon">
+      </button>
+    </form>
   </div>
 </div>
-<router-outlet></router-outlet>
+<app-result *ngIf="githubService.status == 'OK'" [user]="githubService.user" [repos]="githubService.repos"></app-result>
+
+<h1 class="Not-found-message" *ngIf="githubService.status == 'NOT FOUND'">
+  User not found :(
+</h1>
+
+<h1 class="Not-found-message" *ngIf="githubService.status == 'CONNECTION ERROR'">
+  CONNECTION ERROR:
+  <br> Check your internet connection or try again later.
+</h1>
+
+<img class="center" src="./assets/img/loadingDots.gif" alt="" srcset="" *ngIf="githubService.status == 'LOADING'">
