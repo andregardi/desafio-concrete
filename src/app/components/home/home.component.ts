@@ -10,6 +10,7 @@ import { GithubService } from '../../services/github.service'
 })
 export class HomeComponent implements OnInit {
 
+  //Used to capture the username input in the form
   userName: string;
 
   constructor( private router: Router) { }
@@ -17,7 +18,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  searchSubimited(e){
+  //When the form is submitted, prevent default action and navigate to the search
+  searchSubmit(e){
     e.preventDefault();
     let route = "/search/"+this.userName;
     this.router.navigate([route]);

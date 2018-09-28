@@ -8,9 +8,9 @@ import { Search } from '../search/search.component'
 })
 export class ResultComponent implements OnInit {
 
+  // User and Repositories objects from the githubService, inputed through the Search component
   @Input() user;
   @Input() repos;
-
 
   constructor() { }
 

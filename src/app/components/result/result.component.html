@@ -1,19 +1,22 @@
 <div class="left-info">
-    <img class="user-avatar" src="{{user?.avatar_url}}" alt=""
-        srcset="">
-    <h1 class="user-name"  *ngIf="user?.name">
-       {{user?.name}}
+    <img class="user-avatar" src="{{user?.avatar_url}}" alt="" srcset="">
+    <h1 class="user-name" *ngIf="user?.name">
+        {{user?.name}}
     </h1>
-    <h2 class="user-login"  *ngIf="user?.login">
+    <h2 class="user-login" *ngIf="user?.login">
         {{user?.login}}
+    </h2>
+    <h2 class="user-login" *ngIf="user?.bio">
+        {{user?.bio}}
+    </h2>
+    <h2 class="user-login" *ngIf="user?.email">
+        {{user?.email}}
     </h2>
     <div class="details">
         <div class="detail" *ngIf="user?.company">
-            <img src="./assets/img/organization icon.svg" class="details-icon" >
+            <img src="./assets/img/organization icon.svg" class="details-icon">
             <span class="star-count">{{user?.company}}</span>
         </div>
-
-
         <div class="detail" *ngIf="user?.location">
             <img src="./assets/img/location icon.svg" class="details-icon">
             <span class="star-count">{{user?.location}}</span>
@@ -32,11 +35,11 @@
         <div class="detail">
             <img src="./assets/img/followers icon.svg" class="details-icon">
             <span class="star-count">{{user?.followers}}</span>
+            /
+            <span class="star-count">{{user?.following}}</span>
         </div>
     </div>
-
 </div>
-
 
 <div class="right-content">
     <div class="repo" *ngFor="let repo of repos">
@@ -49,6 +52,4 @@
         <img src="./assets/img/star icon.svg" class="star-icon">
         <span class="star-count">{{repo.stargazers_count}}</span>
     </div>
-
-
 </div>

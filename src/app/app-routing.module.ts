@@ -6,15 +6,8 @@ import { Search } from './components/search/search.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  {
-    path: 'search/:userName', component: Search,
-    // children: [
-    //   { path: '', redirectTo: '404', pathMatch: 'full'},
-    //   { path: 'result', component: ResultComponent },
-    //   { path: '404', component: NotFoundComponent },
-    // ]
-  },
-
+  { path: 'search/:userName', component: Search },
+  { path: '**', redirectTo: '', pathMatch: 'full' }, //mispeling routes redirect to home
 ];
 
 @NgModule({

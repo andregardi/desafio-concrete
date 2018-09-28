@@ -1,10 +1,11 @@
+<!-- Header allways showing the search bar -->
 <div class="header">
   <div class="Github-Search">
     <b>Github</b>
     <span class="text-style-1"> Search</span>
   </div>
   <div class="search-bar shadow">
-    <form (submit)="searchSubimited($event)">
+    <form (submit)="searchSubmit($event)">
       <input type="text" class=" Search-Input" name="userName" [(ngModel)]="userName">
       <button type="submit" class="search-button">
         <img src="./assets/img/search-icon.svg" class="Search-Icon">
@@ -12,15 +13,38 @@
     </form>
   </div>
 </div>
+<!-- End of the Header -->
+
+
+<!--
+  Result component.
+  Displayend only when githubService get the data (status = "OK")
+-->
 <app-result *ngIf="githubService.status == 'OK'" [user]="githubService.user" [repos]="githubService.repos"></app-result>
 
+
+<!-- 
+  Not found Message.
+  Diaplayed when githubService 404 error (status = 'NOT FOUND')
+ -->
 <h1 class="Not-found-message" *ngIf="githubService.status == 'NOT FOUND'">
   User not found :(
 </h1>
 
+
+<!-- 
+  Connection Error Message.
+  Diaplayed for every other githubService error (status = 'CONNECTION ERROR')
+ -->
 <h1 class="Not-found-message" *ngIf="githubService.status == 'CONNECTION ERROR'">
   CONNECTION ERROR:
   <br> Check your internet connection or try again later.
 </h1>
 
+
+<!-- 
+  Loading gif.
+  Diaplayed when githubService is waiting for data (status = 'LOADING')
+  Helps the user to understand that something is loading
+ -->
 <img class="center" src="./assets/img/loadingDots.gif" alt="" srcset="" *ngIf="githubService.status == 'LOADING'">
