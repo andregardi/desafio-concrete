@@ -14,7 +14,7 @@ export class Search implements OnInit {
   //Used to capture the username input in the form
   userName: string;
 
-  constructor(private githubService: GithubService, private route: ActivatedRoute, private router: Router) { }
+  constructor(public githubService: GithubService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     //First thing, get the username from the url and send it to githubService

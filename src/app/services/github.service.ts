@@ -16,7 +16,7 @@ export class GithubService {
   baseUrl: string;
   user = {};
   repos = [];
-  status: string = null;
+  public status: string = null;
 
   constructor(private http: HttpClient) {
     //The github api base url is a variable of the environment
@@ -38,7 +38,6 @@ export class GithubService {
       //res is an array that the position 0 is the result of getUser, and 1 of getRepos
       res => {        
         this.user = res[0];
-        console.log(this.user);
 
         //The repos need to be sorted by the stargazers_count (decreasing order)
         this.repos = this.orderRepos(res[1]);

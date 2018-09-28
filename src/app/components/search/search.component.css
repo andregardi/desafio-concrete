@@ -12,8 +12,7 @@
 
 .Github-Search {
   display: inline-block;
-  height: 50px;
-  font-family: Monaco, Consolas;
+  font-family: Monaco;
   font-size: 40px;
   color: #000000;
   margin-left: 25px;
@@ -82,4 +81,42 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+}
+
+@media only screen and (max-width: 1023px) {
+  * {
+    white-space: normal;
+    max-width: 100%;
+  }
+  .header {
+    padding-left: 28px;
+    padding-right: 28px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .Search-Input {
+    width: 80%;
+  }
+  .search-button {
+    width: 20%;
+  }
+  .center {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .search-bar {
+    margin: 0;
+    width: 100%;
+    max-width: 650px;
+  }
+  .Github-Search {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inherit;
+    margin: 0 auto;
+  }
 }
