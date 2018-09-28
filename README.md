@@ -1,27 +1,21 @@
 # Desafio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+Desafio proposto no processo seletivo da Concrete Solutions.
 
-## Development server
+## Proposta
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Implementar uma aplicação client-side, que consulte a API do GitHub e mostre os repositórios de um determinado usuário. Esta aplicação deve funcionar nos navegadores mais recentes do mercado.
 
-## Code scaffolding
+## Navegação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ao buscar um usuário pelo login do github, direcionar para pagina de resultado de busca.
 
-## Build
+Se o usuário for encontrado apresentar pagina de detalhes do usuário (Layout result), caso contrario exibir mensagem amigável (Layout NotFound).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Requisitos
 
-## Running unit tests
+Eu, como usuário, desejo buscar por um usuário do GitHub;
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Eu, como usuário, desejo ver os detalhes desse usuário que foi buscado (número de seguidores, número de seguidos, imagem do avatar, e-mail e bio);
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Eu, como usuário, desejo ver a listagem dos repositórios desse usuário que foi buscado, ordenados pelo número decrescente de estrelas;
